@@ -5,9 +5,27 @@
     <link rel="stylesheet" type="text/css" href="popup.css">
   </head>
   <body>
-    <h1>Test title</h1>
-    <h2 id="title-1">Test title 1</h2>
-    <button id="toggle-button">Toggle</button>
+
+    <h1 id ="title">Thinking About You</h1>
+
+
+    <div id="signup">
+      <h2 class="subtitle">Username: </h2>
+      <input type="text" name="Username" class="input-text" id="username"><br><br>
+
+      <h2 class="subtitle">Partner Username: </h2>
+      <input type="text" name="lname" class="input-text" id="partner-name"><br><br>
+      
+      <button class="button" id="submit-button">Confirm</button>
+    </div>
+
+    <div id="main" style="display:none;">
+      <h1 class="subtitle">Number of times your partner has thought of you.</h1> <br>
+      <h1 class="subtitle" id="count-thoughts">0</h1> <br>
+      <button class="button" id="thinking-button">Send Thoughts</button>
+    </div>
+
+
     <script type="text/javascript" src="popup.js"></script>
   </body>
 </html>

@@ -1,13 +1,13 @@
 {
-    "name": "Thinking about you",
-    "description": "A counter that keeps track of how often your loved one is thinking about you.",
-    "version": "1.0",
-    "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
-      },
-      "permissions": ["storage", "activeTab", "scripting"],
-      "action": {
-        "default_popup": "popup.html"
-      }
-    }
+	"name": "Thinking about you",
+	"description": "A counter that keeps track of how often your loved one is thinking about you.",
+	"version": "1.0",
+	"manifest_version": 2,
+	"background": {
+		"page": "background.html"
+	},
+	"permissions": [ "storage", "activeTab", "notifications" ],
+	"action": {
+		"default_popup": "popup.html"
+	}
+}

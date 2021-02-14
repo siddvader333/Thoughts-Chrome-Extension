@@ -1,4 +1,68 @@
-body{
-    width: 450px;
-    height:450px;
+body {
+	width: 300px;
+	height: 300px;
+	border-radius: 25px;
+	padding: 20px;
+	background-color: #f4f9f9;
+	text-align: center;
+}
+
+#title {
+	color: #fbaccc;
+	font-weight: lighter;
+	font-size: 8vh;
+}
+
+.subtitle {
+	color: #fbaccc;
+	font-weight: lighter;
+	font-size: 5vh;
+}
+
+.input-text {
+	border-radius: 8px;
+	border-color: #fbaccc;
+	height: 8vh;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	color: #f875aa;
+	box-shadow: none;
+	font-weight: 100;
+	font-size: 6vh;
+	border: none;
+	border-bottom: 0.1vh solid rgb(179, 177, 177);
+}
+
+.input-text:active,
+.input-text:focus {
+	outline: none;
+}
+
+.button {
+	text-align: center;
+	width: 50%;
+	height: 10vh;
+	margin: 2.5vh 25% 3.5vh 25%;
+	padding: 1.5vh 0% 1.5vh 0%;
+	background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+	opacity: 0.85;
+	border-radius: 500px;
+	border: none;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	color: rgb(226, 226, 226);
+}
+.button:active,
+.sign-in-button:focus {
+	outline: none;
+}
+.button:hover {
+	background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	transform: translateY(-15%);
+	border: none;
+	opacity: 1.0;
 }
