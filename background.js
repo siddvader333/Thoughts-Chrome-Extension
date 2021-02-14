@@ -1,4 +1,5 @@
 let color = '#3aa757';
+console.log('in background script');
 
 chrome.runtime.onInstalled.addListener(() => {
 	chrome.storage.sync.set({ color });
@@ -6,8 +7,17 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((data) => {
-	console.log('hello');
-	if (data.type === 'notification') {
-		chrome.notifications.create('id', data.options, function(id) {});
+	//Fields not Filled error
+	if(data.type == "notification"){
+		console.log("error found");
+		chrome.notifications.create('', data.options, () => {console.log('created!')});
+		console.log(chrome.runtime);
 	}
 });
+
+
+chrome.runtime.onMessage.addListener(data => {
+	if (data.type === 'notification') {
+	  chrome.notifications.create('', data.options);
+	}
+  });
