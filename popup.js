@@ -4787,8 +4787,10 @@ socket.on('receive-thought', function(data) {
 			});
 		} else {
 			console.log('we have valid user names');
-			//We have a valid user and partner, check if matches
-			if (result.username == data.partner_name) {
+            //We have a valid user and partner, check if matches
+            console.log('sender name: '+ data.sender);
+            console.log('expecting from:' + result.partner_name)
+			if (result.username == data.sender) {
 				console.log('Match ! Partner has sent me a message');
 				//Notification
 				chrome.runtime.sendMessage('', {
@@ -4883,7 +4885,7 @@ function sendThoughts() {
 		} else {
 			//If not empty, send to socket.io
 			console.log('Socket.io Shit goes here');
-			socket.emit('send-thought', { partner_name: result.partner_name }, () => {});
+			socket.emit('send-thought', { sender: result.username }, () => {});
 		}
 	});
 }
