@@ -3,12 +3,13 @@
 	"description": "A counter that keeps track of how often your loved one is thinking about you.",
 	"version": "1.0",
 	"manifest_version": 2,
-	"background" : {
-		"scripts" : ["background.js"],
+	"background": {
+		"scripts": [ "background.js", "socket.io.js" ],
 		"persistent": false
-	  },
-	"permissions": [ "storage", "activeTab", "notifications" ],
+	},
+	"permissions": [ "storage", "notifications" ],
 	"action": {
-		"default_popup": "popup.html"
+		"default_popup": "popup.html",
+		"default_icon": "./heart.png"
 	}
 }

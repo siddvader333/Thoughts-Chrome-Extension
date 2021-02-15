@@ -66,3 +66,32 @@ body {
 	border: none;
 	opacity: 1.0;
 }
+
+.settings-button {
+	text-align: center;
+	width: 50%;
+	height: 10vh;
+	margin: 2.5vh 25% 3.5vh 25%;
+	padding: 1.5vh 0% 1.5vh 0%;
+	background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+	opacity: 0.85;
+	border-radius: 500px;
+	border: none;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	color: rgb(226, 226, 226);
+}
+.settings-button:active,
+.sign-in-button:focus {
+	outline: none;
+}
+.settings-button:hover {
+	background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	transform: translateY(-15%);
+	border: none;
+	opacity: 1.0;
+}

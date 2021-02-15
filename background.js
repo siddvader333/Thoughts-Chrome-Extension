@@ -8,16 +8,16 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.runtime.onMessage.addListener((data) => {
 	//Fields not Filled error
-	if(data.type == "notification"){
-		console.log("error found");
-		chrome.notifications.create('', data.options, () => {console.log('created!')});
-		console.log(chrome.runtime);
+	if (data.type == 'error') {
+		console.log('error found');
+		chrome.notifications.create('', data.options, () => {
+			console.log('created!');
+		});
 	}
 });
 
-
-chrome.runtime.onMessage.addListener(data => {
+chrome.runtime.onMessage.addListener((data) => {
 	if (data.type === 'notification') {
-	  chrome.notifications.create('', data.options);
+		chrome.notifications.create('', data.options);
 	}
-  });
+});
