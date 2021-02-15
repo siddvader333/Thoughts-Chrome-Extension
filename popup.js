@@ -4790,7 +4790,7 @@ socket.on('receive-thought', function(data) {
             //We have a valid user and partner, check if matches
             console.log('sender name: '+ data.sender);
             console.log('expecting from:' + result.partner_name)
-			if (result.username == data.sender) {
+			if (result.partner_name== data.sender) {
 				console.log('Match ! Partner has sent me a message');
 				//Notification
 				chrome.runtime.sendMessage('', {
