@@ -4904,7 +4904,16 @@ async function verifySetup() {
 	});
 }
 
+
 document.getElementById('submit-button').addEventListener('click', confirmButtonOnClick);
 document.getElementById('thinking-button').addEventListener('click', sendThoughts);
 document.getElementById('settings-button').addEventListener('click', togglePage);
 verifySetup();
+
+chrome.storage.sync.get([ 'username', 'partner_name', 'thought_count' ], function(result) {
+    if(result.thought_count == undefined){
+        document.getElementById('thought-count').innerHTML = 0;
+    }else {
+        document.getElementById('thought-count').innerHTML = result.thought_count;
+    }
+});
